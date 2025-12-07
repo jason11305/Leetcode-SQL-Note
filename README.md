@@ -1,4 +1,4 @@
-# Leetcode-SQL-Note
+# Leetcode-Note
 LeetCode SQL problems with personal notes for learning and interview preparation.
 這個 Repository 用來記錄我在刷 **LeetCode SQL 題目** 時的解題筆記與學習心得。
 
