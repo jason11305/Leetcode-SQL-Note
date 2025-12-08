@@ -12,17 +12,20 @@
 **因為Pandas的多欄位輸出不熟悉，所以記錄這一題**
 
 MySQL語法:
+```sql
 SELECT name, population, area
 FROM world
 WHERE area >= 3000000 OR population >= 25000000;
+```
 
 
 Pandas語法:
+```Pandas
 import pandas as pd
 
 def big_countries(world: pd.DataFrame) -> pd.DataFrame:
     big_countries = world.loc[(world["area"] >= 3000000) | (world["population"] >= 25000000)]
     # #輸出多欄位，直接用逗號隔開
     return big_countries.loc[:, ["name", "population", "area"]]
-
+```
     
