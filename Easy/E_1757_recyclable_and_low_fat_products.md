@@ -22,6 +22,7 @@ FROM products
 WHERE low_fats = 'Y'AND recyclable = 'Y';
 
 
+
 Pandas語法:
 import pandas as pd
 
