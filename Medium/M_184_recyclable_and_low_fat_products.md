@@ -61,18 +61,15 @@ WHERE e.salary = (
 );
 ```
 
-### ✔ 解法 2：另建一張表格再用JOIN
+### ✔ 解法 2：用Window function，函數:rank()
 ```sql
-WITH high_sal AS(
-    SELECT departmentId,MAX(salary) AS dept_max
+WITH sal_rank AS(
+    SELECT id, name, salary, departmentid,
+    rank() over(PARTITION BY departmentid ORDER BY salary DESC) AS highest
     FROM employee
-    GROUP BY departmentId
-)
-SELECT d.name AS Department,
-       e.name AS Employee,
-       e.salary AS Salary
-FROM employee e
-JOIN high_sal h ON e.departmentId = h.departmentId
+) 
+SELECT d.name AS Department, e.name AS Employee, e.salary AS salary
+FROM sal_rank e
 JOIN department d ON e.departmentId = d.id
-WHERE e.salary = h.dept_max;
+WHERE highest = 1;
 ```
