@@ -59,7 +59,7 @@ WHERE e.salary = (
     FROM Employee
     WHERE departmentId = e.departmentId
 );
-```sql
+```
 
 ### ✔ 解法 2：另建一張表格再用JOIN
 ```sql
