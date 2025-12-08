@@ -1,5 +1,5 @@
 # 584. Find Customer Referee
-
+題目要我們**找出所有「推薦人不是 2 的顧客」**
 ## 📌 題目重點
 
 - 資料表只有一張：`Customer`
