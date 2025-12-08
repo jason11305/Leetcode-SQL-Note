@@ -25,3 +25,9 @@ Leetcode-SQL-Note/
 | 1757 | Recyclable and Low Fat Products | [E_1757_recyclable_and_low_fat_products.md](Easy/E_1757_recyclable_and_low_fat_products.md) |
 | 584  | Find Customer Referee | [E_584_find_customer_referee.md](Easy/E_584_find_customer_referee.md) |
 | 595  | Big Countries | [E_595_big_countries.md](Easy/E_595_big_countries.md) |
+
+## 📘 Medium 題目列表
+
+| 題號 | 題目名稱 | 筆記連結 |
+|------|-----------|-----------|
+| 1757 | Department Highest Salary | [M_184_department_highest_salary.md](Medium/M_184_department_highest_salary.md) |
