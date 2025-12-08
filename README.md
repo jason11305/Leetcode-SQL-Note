@@ -9,13 +9,14 @@ LeetCode SQL problems with personal notes for learning and interview preparation
 ---
 
 ## 📁 Repo 結構
-Leetcode-SQL-Note//
+```
+Leetcode-SQL-Note/
 ├── Easy/          
 ├── Medium/        
 ├── Hard/          
 ├── SQL_Patterns/  
 └── README.md
-
+```
 
 ## 📘 Easy 題目列表
 
