@@ -10,7 +10,7 @@ LeetCode SQL problems with personal notes for learning and interview preparation
 
 ## 📂 Repo 結構
 
-```text
+text
 Leetcode-SQL-Note/
 ├── Easy/           # Easy 題目的解題筆記
 ├── Medium/         # Medium 題目的解題筆記
