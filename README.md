@@ -8,8 +8,7 @@ LeetCode SQL problems with personal notes for learning and interview preparation
 
 ---
 
-## 📂 Repo 結構
-
+## 📁 Repo 結構
 text
 Leetcode-SQL-Note/
 ├── Easy/           # Easy 題目的解題筆記
@@ -17,6 +16,7 @@ Leetcode-SQL-Note/
 ├── Hard/           # Hard 題目的解題筆記
 ├── SQL_Patterns/   # 重複出現的 SQL 観念與整理(希望能做到)
 └── README.md
+
 ## 📘 Easy 題目列表
 
 | 題號 | 題目名稱 | 筆記連結 |
