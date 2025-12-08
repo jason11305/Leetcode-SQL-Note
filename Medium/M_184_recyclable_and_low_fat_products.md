@@ -65,7 +65,7 @@ WHERE e.salary = (
 ```sql
 WITH sal_rank AS(
     SELECT id, name, salary, departmentid,
-    rank() over( PARTITION BY departmentid ORDER BY salary DESC) AS highest
+    rank() over(PARTITION BY departmentid ORDER BY salary DESC) AS highest
     FROM employee
 ) 
 SELECT d.name AS Department, e.name AS Employee, e.salary AS salary
