@@ -44,8 +44,24 @@
 
 
 
-### ✔ 解法 1：子查詢找每個部門的最高薪水（最經典）
+### ✔ 解法 1：在JOIN中用子查詢找每個部門的最高薪水（最經典）
 MySQL語法:
+```sql
+SELECT 
+    d.name AS Department,
+    e.name AS Employee,
+    e.salary AS Salary
+FROM Employee e
+JOIN Department d
+    ON e.departmentId = d.id
+WHERE e.salary = (
+    SELECT MAX(salary)
+    FROM Employee
+    WHERE departmentId = e.departmentId
+);
+```sql
+
+### ✔ 解法 2：另建一張表格再用JOIN
 ```sql
 WITH high_sal AS(
     SELECT departmentId,MAX(salary) AS dept_max
