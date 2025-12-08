@@ -30,4 +30,4 @@ Leetcode-SQL-Note/
 
 | 題號 | 題目名稱 | 筆記連結 |
 |------|-----------|-----------|
-| 1757 | Department Highest Salary | [M_184_department_highest_salary.md](Medium/M_184_department_highest_salary.md) |
+| 184 | Department Highest Salary | [M_184_department_highest_salary.md](Medium/M_184_department_highest_salary.md) |
