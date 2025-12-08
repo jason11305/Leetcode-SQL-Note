@@ -17,13 +17,15 @@
 條件之間是 **AND 關係**
 
 MySQL語法:
+```sql
 SELECT product_id
 FROM products
 WHERE low_fats = 'Y'AND recyclable = 'Y';
-
+```
 
 
 Pandas語法:
+```Pandas
 import pandas as pd
 
 def find_products(products: pd.DataFrame) -> pd.DataFrame:
@@ -31,3 +33,4 @@ def find_products(products: pd.DataFrame) -> pd.DataFrame:
     df = df[['product_id']]
     
     return df
+```
