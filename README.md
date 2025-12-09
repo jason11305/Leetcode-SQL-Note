@@ -22,9 +22,10 @@ Leetcode-SQL-Note/
 
 | 題號 | 題目名稱 | 筆記連結 |
 |------|-----------|-----------|
-| 1757 | Recyclable and Low Fat Products | [E_1757_recyclable_and_low_fat_products.md](Easy/E_1757_recyclable_and_low_fat_products.md) |
-| 584  | Find Customer Referee | [E_584_find_customer_referee.md](Easy/E_584_find_customer_referee.md) |
 | 595  | Big Countries | [E_595_big_countries.md](Easy/E_595_big_countries.md) |
+| 584  | Find Customer Referee | [E_584_find_customer_referee.md](Easy/E_584_find_customer_referee.md) |
+| 1757 | Recyclable and Low Fat Products | [E_1757_recyclable_and_low_fat_products.md](Easy/E_1757_recyclable_and_low_fat_products.md) |
+| 1527  | Patients With a Condition(練習Regular Expression) | [E_1527_patients_with_a_condition.md](E_1527_patients_with_a_condition.md) |
 
 ## 📘 Medium 題目列表
 
