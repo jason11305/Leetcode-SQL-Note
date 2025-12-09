@@ -8,7 +8,8 @@
   - `ACNE DIAB100`
 
 目標：  
-找出 **有 DIAB1 這個病碼的病人** 
+找出**病碼前綴一定是 DIAB1**。
+- 只要某個病碼是從 DIAB1 開頭的，就代表這個病人有這個 condition。
 
 > [!NOTE]
 > **誤區（錯誤示範）**  
@@ -36,7 +37,7 @@ MySQL語法:
 ```sql
 SELECT *
 FROM Patients
-WHERE conditions REGEXP '(^|[[:space:]])DIAB1';
+WHERE conditions  REGEXP '(^| )DIAB1[0-9]*($| )';
 ```
 
 
@@ -51,11 +52,11 @@ WHERE conditions REGEXP '(^|[[:space:]])DIAB1';
 | `( )`   | 群組（Grouping） |
 
 Regex <mark>'(^|[[:space:]])DIAB1' </mark>的意義：
-- 前方只能是開頭或空白
-- 後方只能結尾
-- 確保 DIAB1 是獨立的 token，不會抓到 DIAB10、DIAB11
+- 前面是「字串開頭」或「空白」
+- 接著是 DIAB1
+- 後面再接 0 個以上數字（病碼以 DIAB1 開頭）「病碼後面要嘛是字串結尾，要嘛是一個空白」
 
--- 延伸：若要比對「獨立病碼 DIAB1」，可用：
+## 延伸：若要比對「獨立病碼 DIAB1」，可用：
 ```sql
 SELECT *
 FROM Patients
