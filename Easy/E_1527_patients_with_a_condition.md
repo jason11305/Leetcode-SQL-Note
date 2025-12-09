@@ -36,7 +36,7 @@ MySQL語法:
 ```sql
 SELECT *
 FROM Patients
-WHERE conditions REGEXP '(^| )DIAB1( |$)';
+WHERE conditions REGEXP '(^|[[:space:]])DIAB1';
 ```
 
 
@@ -45,11 +45,12 @@ WHERE conditions REGEXP '(^| )DIAB1( |$)';
 | ------- | ------------ |
 | `^`     | 字串開頭         |
 | `$`     | 字串結尾         |
-| ` `     | 空白（space）    |
 | `x\|y`  | x 或 y        |
+| ` `     | 空白（space）    |
+| [[:space:]] | 任何空白字元（空格、tab、換行等所有空白類型）    |
 | `( )`   | 群組（Grouping） |
 
-Regex <mark>'(^| )DIAB1( |$)' </mark>的意義：
+Regex <mark>'(^|[[:space:]])DIAB1' </mark>的意義：
 - 前方只能是開頭或空白
-- 後方只能是空白或結尾
+- 後方只能結尾
 - 確保 DIAB1 是獨立的 token，不會抓到 DIAB10、DIAB11
