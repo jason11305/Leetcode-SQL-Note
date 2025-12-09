@@ -54,3 +54,8 @@ Regex <mark>'(^|[[:space:]])DIAB1' </mark>的意義：
 - 前方只能是開頭或空白
 - 後方只能結尾
 - 確保 DIAB1 是獨立的 token，不會抓到 DIAB10、DIAB11
+
+-- 延伸：若要比對「獨立病碼 DIAB1」，可用：
+SELECT *
+FROM Patients
+WHERE conditions REGEXP '(^|[[:space:]])DIAB1([[:space:]]|$)';
