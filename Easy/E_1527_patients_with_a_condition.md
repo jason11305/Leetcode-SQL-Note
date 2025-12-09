@@ -30,7 +30,7 @@
 SELECT *
 FROM Patients
 WHERE conditions LIKE '%DIAB1%';
-
+```
 
 
 ## 🧠 解題思路
