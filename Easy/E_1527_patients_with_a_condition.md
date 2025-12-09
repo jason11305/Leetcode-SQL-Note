@@ -49,7 +49,7 @@ WHERE conditions REGEXP '(^| )DIAB1( |$)';
 | `x\|y`  | x 或 y        |
 | `( )`   | 群組（Grouping） |
 
-Regex '(^| )DIAB1( |$)' 的意義：
+Regex <mark>'(^| )DIAB1( |$)' </mark>的意義：
 - 前方只能是開頭或空白
 - 後方只能是空白或結尾
 - 確保 DIAB1 是獨立的 token，不會抓到 DIAB10、DIAB11
