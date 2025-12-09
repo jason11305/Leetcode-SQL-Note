@@ -2,24 +2,35 @@
 
 ## 📌 題目重點
 - 資料表只有一張：`Patients`
-- 其中 conditions 是以空白分隔的病碼，例如：
+- `conditions` 是以空白分隔的多個病碼，例如：
   - `DIAB1`
   - `DIAB100 MYOP`
   - `ACNE DIAB100`
 
-目標：  
-找出**病碼前綴一定是 DIAB1**。
-- 只要某個病碼是從 DIAB1 開頭的，就代表這個病人有這個 condition。
+🎯 目標：  
+找出 **至少一個病碼的前綴是 DIAB1 的病患**  
+也就是說：  
+- `DIAB1` → ✔  
+- `DIAB10` → ✔  
+- `DIAB100` → ✔  
+- 但 `ACNEDIAB10`（沒有空白分隔）→ ❌ 不算病碼  
+
+---
+
+## ⚠ 常見誤區（錯誤示範）
 
 > [!NOTE]
-> **誤區（錯誤示範）**  
-> 下面這個寫法看起來像是找「DIAB1」，但其實會誤抓「DIAB10」、「SDIAB12」：
+> 下面這段雖然會找到 DIAB1，但也會誤抓：
+> - `DIAB10`（子字串開頭匹配）
+> - `SDIAB12`（前面黏字，不是獨立病碼）
 >
-> ```sql
-> SELECT *
-> FROM Patients
-> WHERE conditions LIKE '%DIAB1%';
-> ```
+> 因為 `%DIAB1%` 是子字串搜尋，不會判斷「病碼邊界」。
+
+```sql
+SELECT *
+FROM Patients
+WHERE conditions LIKE '%DIAB1%';
+
 
 
 ## 🧠 解題思路
