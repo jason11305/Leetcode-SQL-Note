@@ -51,7 +51,7 @@ WHERE conditions  REGEXP '(^| )DIAB1[0-9]*($| )';
 | [[:space:]] | 任何空白字元（空格、tab、換行等所有空白類型）    |
 | `( )`   | 群組（Grouping） |
 
-Regex <mark>'(^|[[:space:]])DIAB1' </mark>的意義：
+Regex <mark>'(^| )DIAB1[0-9]*($| )' </mark>的意義：
 - 前面是「字串開頭」或「空白」
 - 接著是 DIAB1
 - 後面再接 0 個以上數字（病碼以 DIAB1 開頭）「病碼後面要嘛是字串結尾，要嘛是一個空白」
