@@ -20,10 +20,7 @@ WHERE mail REGEXP '^[A-Za-z][A-Za-z0-9_.-]*@leetcode\\.com$';
 
 這題有兩件事要處理：
 
-✔ 1. 用 REGEXP 驗證 email 格式
+local-part 格式驗證 → 用 REGEXP
 
-但由於 REGEXP 不分大小寫，只能用來驗證 local-part 與字元結構。
+domain 必須完全小寫 → 用 LIKE BINARY（大小寫敏感比對）
 
-✔ 2. 強制 domain 必須全小寫
-
-用 LIKE BINARY 做大小寫敏感比對。
