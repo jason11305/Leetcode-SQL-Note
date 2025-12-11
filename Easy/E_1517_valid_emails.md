@@ -5,7 +5,7 @@
 - 後面可以是：英文字母（大小寫）、數字 0–9、_（底線）、.（點）、-（減號）
 - 再接上@leetcode.com（而且全部小寫）
 
-🎯 目標：  
+## 🎯 目標：  
 找出 **email 格式完全符合特定規則的使用者**  
 
 
@@ -25,11 +25,10 @@ local-part 格式驗證 → 用 REGEXP
 domain 必須完全小寫 → 用 LIKE BINARY（大小寫敏感比對）
 
 ```sql
-SELECT* 
+SELECT *
 FROM Users
-WHERE 
-    mail REGEXP '^[a-zA-Z][a-zA-Z0-9_.-]*@leetcode\\.com$' 
-    AND mail LIKE BINARY '%@leetcode.com';
+WHERE mail REGEXP '^[A-Za-z][A-Za-z0-9_.-]*@leetcode\\.com$'
+            AND mail LIKE BINARY '%@leetcode.com';
 ```
 
 
@@ -41,8 +40,7 @@ WHERE
 | `[A-Za-z]`        | 第一個字元為英文字母                         |
 | `[A-Za-z0-9_.-]*` | 後續可為英文字母、數字、`_ . -`                |
 | `@leetcode\.com`  | 固定字串 `@leetcode.com`（`.` 需寫成 `\.`） |
-| `x\|y`            | x 或 y                              |
-| `( )`             | 群組（Grouping）                       |
+
 
 ## 延伸：
 「一般 email 格式檢查」
