@@ -16,7 +16,7 @@
 WHERE mail REGEXP '^[A-Za-z][A-Za-z0-9_.-]*@leetcode\\.com$';
 ```
 
-##🧠 解題思路
+## 🧠 解題思路
 這題有兩件事要處理：
 local-part 格式驗證 → 用 REGEXP
 domain 必須完全小寫 → 用 LIKE BINARY（大小寫敏感比對）
@@ -40,7 +40,7 @@ WHERE
 | `x\|y`            | x 或 y                              |
 | `( )`             | 群組（Grouping）                       |
 
-##延伸：
+## 延伸：
 「一般 email 格式檢查」
 ```sql
 WHERE mail REGEXP '^[A-Za-z][A-Za-z0-9_.-]*@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$';
